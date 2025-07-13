@@ -8,6 +8,7 @@ Create a new project:
 - Name: BasicFaqChatbot
 - Minimum SDK: API 21+
 Add dependencies to build.gradle:
+
 Code:
 Groovy
 implementation "androidx.compose.ui:ui:1.6.0"
