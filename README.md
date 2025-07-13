@@ -200,6 +200,58 @@ fun PreviewGreeting() {
 }
 
 - Hit Run to make sure everything launches correctly on emulator or device.
+**
+- Steps for implementing Step 2**
+- 
+Step 2: Define FAQ Data Model – Detailed Walkthrough
+✅ 1. Open Your Project in Android Studio
+Make sure your project is already set up with:
+- Kotlin as the language
+- Jetpack Compose enabled
+- MainActivity is working correctly
+
+📂 2. Create a New Kotlin File for the Model
+Let’s keep things organized by placing your model in a dedicated file:
+Steps:
+- In Android Studio’s Project view, navigate to:
+app > java > com.ishadahiya.faqchatbotapp
+- Right-click on the package name →
+New > Kotlin Class/File
+- Name it: FAQ.kt
+- Select Kind: Class
+
+✍️ 3. Define the FAQ Data Class
+In your newly created FAQ.kt file, paste the following code:
+
+Kotlin
+package com.ishadahiya.faqchatbotapp
+
+data class FAQ(
+    val keyword: String,   // e.g. "Returns"
+    val question: String,  // e.g. "Can I return the product?"
+    val answer: String     // e.g. "Yes, returns are accepted within 7 days."
+)
+
+ Notes:
+- keyword helps organize FAQs by tag (like "Pricing" or "Availability").
+- Each instance of FAQ holds a question and its answer.
+
+🧪 4. Create Sample Data (Static List for Testing)
+You can define this inside MainActivity.kt or create a new file named SampleFaqProvider.kt if you'd like to keep it modular.
+
+Kotlin
+val sampleFaqs = listOf(
+    FAQ("Returns", "Can I return a product?", "Yes, returns are accepted within 7 days."),
+    FAQ("Pricing", "Are prices inclusive of tax?", "All prices include GST."),
+    FAQ("Availability", "Is this item in stock?", "Stock availability varies by location.")
+)
+You’ll use this list later to match user queries or display FAQs grouped by tag.
+
+Optional: Organize FAQs by Tags (Map Format)
+For tag-based grouping, prepare a keyword-based map:
+Kotlin
+val faqMap = sampleFaqs.groupBy { it.keyword }
+This will allow you to create collapsible UI sections (e.g., all "Returns" FAQs together) later in Jetpack Compose.
 
 
 
