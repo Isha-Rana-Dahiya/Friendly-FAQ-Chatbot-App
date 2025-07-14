@@ -5,8 +5,8 @@ Tools:
 - Jetpack Compose enabled
 Create a new project:
 - Template: Empty Compose Activity
-- Name: BasicFaqChatbot
-- Minimum SDK: API 21+
+- Name: Friendly FAQ Chatbot App
+- Minimum SDK: API 24("Nougat";Android 7.0)
 Add dependencies to build.gradle:
 
 Code:
