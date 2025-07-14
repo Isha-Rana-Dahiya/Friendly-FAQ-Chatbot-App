@@ -14,6 +14,9 @@ Groovy
 implementation "androidx.compose.ui:ui:1.6.0"
 implementation "androidx.navigation:navigation-compose:2.7.0"
 
+<img width="939" height="494" alt="image" src="https://github.com/user-attachments/assets/1d7bdd1d-e450-43d8-bf0f-462dbd6cc0b0" />
+
+
 **Step 2:** Define Data Model
 Create a simple model to represent FAQs grouped by tags.
 Kotlin
